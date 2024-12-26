@@ -1,4 +1,4 @@
-#Cartoonize Images using Pix2Pix GAN
+Cartoonize Images using Pix2Pix GAN
 This project aims to transform real-world images into cartoon-style images using a Pix2Pix Generative Adversarial Network (GAN). It includes dataset preparation, training, and testing of the model, along with a demo on new images and videos.
 
 Overview
@@ -14,7 +14,7 @@ The dataset used for this project is based on the Scenery Watermarks Dataset fro
 Modifications: The dataset was processed using OpenCV to create cartoonized versions of the original images.
 You can download the original dataset from Kaggle and place it in the data/ directory as follows:
 php
-Copier le code
+
 data/
 ├── train/
 │   ├── real/         # Original images from the dataset
@@ -46,17 +46,17 @@ Ensure the dataset follows the format shown above.
 Train the Pix2Pix model:
 
 bash
-Copier le code
+
 python train_pix2pix.py --dataset_path data/train
 Test the model on new images:
 
 bash
-Copier le code
+
 python test_pix2pix.py --input_path data/test/real --output_path results/
 Demo on a video:
 
 bash
-Copier le code
+
 python demo_video.py --input_video input.mp4 --output_video cartoonized_output.mp4
 Results
 Sample Outputs:
@@ -68,7 +68,6 @@ Adversarial Loss: value
 L1 Loss: value
 Repository Structure
 bash
-Copier le code
 cartoonize-images/
 ├── data/                # Dataset of real and cartoonized images
 ├── scripts/             # OpenCV scripts for image stylization
@@ -77,6 +76,7 @@ cartoonize-images/
 ├── demo_video.py        # Script for video demonstration
 ├── requirements.txt     # Required Python libraries
 └── README.md            # Project documentation
+
 Acknowledgments
 Dataset: Scenery Watermarks Dataset by qwertyforce.
 GAN Model: Based on the Pix2Pix implementation for image-to-image translation.
